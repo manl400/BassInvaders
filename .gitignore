@@ -2,3 +2,7 @@ main.o
 *.o
 BassInvaders.layout
 BassInvaders.dev
+SDL2.dll
+SDL2_image.dll
+SDL2_ttf.dll
+Makefile.win
