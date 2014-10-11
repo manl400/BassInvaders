@@ -3,7 +3,15 @@
 
 bool quit = false;
 
+//////////////////
+int x = 310, y = 440;
+/////////////////
+
 void Key_Presses(){
+		
+		SDL_PollEvent(&Eve0);
+		//while (SDL_PollEvent(&Eve0))
+		//{
 		
 		switch (Eve0.type)
 		{
@@ -15,13 +23,32 @@ void Key_Presses(){
 				switch (Eve0.key.keysym.sym)
 				{
 					// all key events can be coded here and if the efect is longer then a few lines simple make a funtion for them in this header and then have the case call the funtion.
-					case SDLK_0: std::cout << "THE 0 KEY HAS BEEN HIT!" << std::endl; break; // these 2 are tests.
-					case SDLK_1: std::cout << "THE 1 KEY HAS BEEN HIT!" << std::endl; break;
+
+					
+					/////////////////////////////////////
+		    			 case SDLK_LEFT:  x-= 3; break;
+           				 case SDLK_RIGHT: x+= 3; break;
+            			
+					/////////////////////////////////////
+				    default: break;
 				}
 				break;
+				
+				
+				case SDL_KEYUP:
+				switch (Eve0.key.keysym.sym)
+				{
+					case SDLK_LEFT:  x-= 3; break;
+           			case SDLK_RIGHT: x+= 3; break;
+						
+				    default: break;
+				}
+				break;
+				
+				
 		}
-		}
-
+		//}
+}
 #endif
 
 // a list of all SDL_keycodes here : https://wiki.libsdl.org/SDL_Keycode

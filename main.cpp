@@ -31,19 +31,56 @@ int main(int argc, char *argv[])
 	const int FPS=60;
 	Uint32 FPS_A;
 	
+	////testing////
+		SDL_Rect ShipA;
+		SDL_Rect ShipB;
+	
+	////testing////
+	
 	// game loop
 	while(!quit)
 	{
-		FPS_A = SDL_GetTicks();
-		SDL_Delay(20);
-		SDL_WaitEvent(&Eve0);
+		//SDL_PollEvent(&Eve0);
+	    FPS_A = SDL_GetTicks();
+		
+		//SDL_WaitEvent(&Eve0);
+		
 		
 		Key_Presses();
 		
+
+		////////////////////////
 		
 		
-		// if it is over the frame rate it will delay game. this must say at the end of the loop.
-		if(1000/FPS > SDL_GetTicks() - FPS_A)
+		//SDL_FillRect(Sur0, &Sur0->clip_rect, SDL_MapRGB(Sur0->format, 0xff,0xff,0xff));
+		//SDL_FillRect(Sur0, &test, SDL_MapRGB(Sur0->format, 0,0,0));
+		//SDL_Flip(Sur0);
+		
+		SDL_SetRenderDrawColor( Ren0, 0, 0, 0, 255 );
+		
+		SDL_RenderClear(Ren0);
+		
+		SDL_SetRenderDrawColor( Ren0, 255, 255, 255, 255 );
+		
+		ShipA.x = x;
+		ShipA.y = y;
+		ShipA.w = 20;
+		ShipA.h = 10;
+		
+		ShipB.x = (5+x);
+		ShipB.y = y-7;
+		ShipB.w = 10;
+		ShipB.h = 10;
+		
+		
+		SDL_RenderFillRect(Ren0, &ShipA);
+		SDL_RenderFillRect(Ren0, &ShipB);
+		
+		SDL_RenderPresent(Ren0);
+		////////////////////////
+		
+		 //if it is over the frame rate it will delay game. this must say at the end of the loop.
+		 if(1000/FPS > SDL_GetTicks() - FPS_A)
 			SDL_Delay(1000/FPS - (SDL_GetTicks() - FPS_A));
 	}
 	
