@@ -14,4 +14,8 @@ SDL_Texture  *Tex0;
 
 SDL_Event     Eve0;
 
+// rects
+SDL_Rect ShipA;
+SDL_Rect ShipB;
+
 #endif
