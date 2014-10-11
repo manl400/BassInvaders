@@ -38,16 +38,16 @@ void Key_Presses(){
 				case SDL_KEYUP:
 				switch (Eve0.key.keysym.sym)
 				{
-					case SDLK_LEFT:  x-= 3; break;
-           			case SDLK_RIGHT: x+= 3; break;
+					//case SDLK_LEFT:  x+= 3; break;
+           			//case SDLK_RIGHT: x-= 3; break;
 						
 				    default: break;
 				}
 				break;
 				
 				
-		}
 		//}
+		}
 }
 #endif
 
