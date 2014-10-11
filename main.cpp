@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
 	////testing////
 		SDL_Rect ShipA;
 		SDL_Rect ShipB;
+		
 	
 	////testing////
 	
@@ -44,6 +45,7 @@ int main(int argc, char *argv[])
 	    FPS_A = SDL_GetTicks();
 		
 		//SDL_WaitEvent(&Eve0);
+		
 		
 		
 		Key_Presses();
