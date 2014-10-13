@@ -18,11 +18,14 @@ void Draw_Ship()
 	SDL_RenderFillRect(Ren0, &ShipA);
 	SDL_RenderFillRect(Ren0, &ShipB);	
 }
+
+
 // this draws evething in one funtion.
 void Draw_Things()
 {
 	Draw_Background();
 	Draw_Ship();
+	Draw_Laser_WPN();
 	SDL_RenderPresent(Ren0);
 }
 

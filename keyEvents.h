@@ -3,10 +3,7 @@
 
 bool quit = false;
 
-//////////////////
-int x = 310, y = 440;
-int movespeed = 7;
-//////////////////
+
 
 
 
@@ -43,6 +40,7 @@ void Key_Presses()
 					// key events that arn't contious-response can be put here.
 		    			 //case SDLK_LEFT:  x-= 3; break;
            				 //case SDLK_RIGHT: x+= 3; break;
+           				 case SDLK_DOWN: Fire_Laser(); break;
             		
 				    default: break;
 				}

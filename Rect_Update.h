@@ -16,10 +16,23 @@ void Ship_Update()
 		ShipB.h = 10;
 }
 
+
+
+// physics and such talke place in this header also.
+
+void screen_bonder()
+{
+	if(x <= 0)
+	x += movespeed;
+	if(x >= 620)
+	x -= movespeed;
+}
+
 //this updates all rects.
 void Update_Rect()
 {
+	screen_bonder();
 	Ship_Update();
+	Laser_WPN();
 }
-
 #endif
