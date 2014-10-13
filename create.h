@@ -4,6 +4,8 @@
 //////////////////
 int x = 310, y = 440;
 int movespeed = 7;
+bool LAZER;
+int temp_loc;
 //////////////////
 int lx = x + 5, ly = 430;
 

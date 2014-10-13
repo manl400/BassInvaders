@@ -17,7 +17,6 @@
 #include <iostream>
 #include "create.h"
 #include "sdl_init.h"
-
 #include "Laser_Wpn.h"
 #include "keyEvents.h"
 #include "Rendering.h"

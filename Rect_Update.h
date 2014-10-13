@@ -34,5 +34,6 @@ void Update_Rect()
 	screen_bonder();
 	Ship_Update();
 	Laser_WPN();
+	update_laser();
 }
 #endif
