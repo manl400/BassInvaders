@@ -26,6 +26,10 @@ void Draw_Things()
 	Draw_Background();
 	Draw_Ship();
 	Draw_Laser_WPN();
+	///////////////////
+	if(!particlesA) // i know this bool is a bit backwords
+	Draw_particles();
+	//////////////////
 	SDL_RenderPresent(Ren0);
 }
 
