@@ -5,6 +5,7 @@
 //draw the background.
 void Draw_Background()
 {
+	
 
 	SDL_SetRenderDrawColor( Ren0, 0, 0, 0, 255 );
 		
@@ -25,11 +26,13 @@ void Draw_Things()
 {
 	Draw_Background();
 	Draw_Ship();
+	Draw_BadShips();
 	Draw_Laser_WPN();
 	///////////////////
 	if(!particlesA) // i know this bool is a bit backwords
 	Draw_particles();
 	//////////////////
+	
 	SDL_RenderPresent(Ren0);
 }
 

@@ -16,6 +16,7 @@
 #include <SDL_ttf.h>
 #include <iostream>
 #include "create.h"
+#include "BadShips.h"
 #include "sdl_init.h"
 #include "Laser_Wpn.h"
 #include "keyEvents.h"
@@ -34,6 +35,8 @@ int main(int argc, char *argv[])
 	//for frame rate.
 	const int FPS=60;
 	Uint32 FPS_A;
+	
+	Set_Badship_loc();
 	
 	// game loop
 	while(!quit)
