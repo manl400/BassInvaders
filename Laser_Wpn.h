@@ -52,7 +52,7 @@ int alphalowerA = 255;
 void Draw_particles()
 {
 	
-	if(!particlesA && alphalowerA != 0)
+	if(!particlesA && alphalowerA > -1)
 	alphalowerA -= 10;
 
 	SDL_SetRenderDrawColor( Ren0, alphalowerA, alphalowerA, alphalowerA, 255 ); 
