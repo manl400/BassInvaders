@@ -474,20 +474,29 @@ void Check_hit()
 	for(int i = 1; i < 16; i++)
 	{
 		//if( ((lx > BSAx[i]) && (lx < BSAx[i]+20 )) && (( ly > BSAy[i]+20) && ( ly < BSAy[i]) ))
-		if(ly > BSAy[i] && ly < BSAy[i]+20)
+		if(LaserA.y > BSAy[i] && LaserA.y < BSAy[i]+20)
 		{
-			if(lx > BSAx[i] && lx < BSAx[i]+20)
+			if(LaserA.x > BSAx[i] && LaserA.x < BSAx[i]+20){
+			if(BSAA[i])
+			reset_laser();
 			BSAA[i] = false;
+			}
 		}
-		if(ly > BSBy[i] && ly < BSBy[i]+20)
+		if(LaserA.y > BSBy[i] && LaserA.y < BSBy[i]+20)
 		{
-			if(lx > BSBx[i] && lx < BSBx[i]+20)
+			if(LaserA.x >= BSBx[i] && LaserA.x <= BSBx[i]+20){
+			if(BSBA[i])
+			reset_laser();
 			BSBA[i] = false;
+			}
 		}
-		if(ly > BSCy[i] && ly < BSCy[i]+20)
+		if(LaserA.y > BSCy[i] && LaserA.y < BSCy[i]+20)
 		{
-			if(lx > BSCx[i] && lx < BSCx[i]+20)
+			if(LaserA.x > BSCx[i] && LaserA.x < BSCx[i]+20){
+			if(BSCA[i])
+			reset_laser();
 			BSCA[i] = false;
+			}
 		}
 	}
 }

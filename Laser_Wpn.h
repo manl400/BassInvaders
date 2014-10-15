@@ -1,6 +1,6 @@
 #ifndef LASER_WPN_H
 #define LASER_WPN_H
-bool laser, wait; // need to find a way to make this not global.
+
 bool particles_GET(int a,int b);
 
 void Laser_WPN()
@@ -147,8 +147,17 @@ void particles(int a, int b)
 	alphalowerA = 255;
 	}
 }
-
-
+/* moved this to create header becuase badships header needs to use this funtion.
+void reset_laser()
+{
+		
+	
+		LAZER = false;
+		ly = 430;
+		wait = false;
+	
+}
+*/
 // laser agian 
 void update_laser()
 {
@@ -157,13 +166,8 @@ void update_laser()
 	ly -= movespeed + 3;
 	
 	particles(x,y);
-	
 	if(ly < 0)
-	{
-		LAZER = false;
-		ly = 430;
-		wait = false;
-	}
+	reset_laser();
 	
 }
 else

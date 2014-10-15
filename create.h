@@ -14,6 +14,7 @@ int BSBx[16], BSBy[20];
 bool BSBA[16];
 int BSCx[16], BSCy[20];
 bool BSCA[16];
+bool laser, wait; // need to find a way to make this not global.
 //////////////////
 int lx = x + 5, ly = 430;
 
@@ -107,5 +108,16 @@ SDL_Rect PARTG;
 
 //for Laser_Wpn.h (keep on bottem for now)
 SDL_Rect LaserA;
+
+
+void reset_laser()
+{
+		
+	
+		LAZER = false;
+		ly = 430;
+		wait = false;
+	
+}
 
 #endif
