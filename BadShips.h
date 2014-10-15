@@ -172,6 +172,198 @@ void Update_BadShip_Loc()
     
     BSA15.h = 20;
     BSA15.w = 20;
+    
+    // 2nd row //////////////////////////////////////////
+    
+    BSB1.x = BSBx[1];
+	BSB1.y = BSBy[1];
+	
+	BSB2.x = BSBx[2];
+	BSB2.y = BSBy[2];
+	
+	BSB3.x = BSBx[3];
+	BSB3.y = BSBy[3];
+	
+	BSB4.x = BSBx[4];
+	BSB4.y = BSBy[4];
+	
+	BSB5.x = BSBx[5];
+	BSB5.y = BSBy[5];
+	
+	BSB6.x = BSBx[6];
+	BSB6.y = BSBy[6];
+	
+	BSB7.x = BSBx[7];
+	BSB7.y = BSBy[7];
+	
+	BSB8.x = BSBx[8];
+	BSB8.y = BSBy[8];
+	
+	BSB9.x = BSBx[9];
+	BSB9.y = BSBy[9];
+	
+	BSB10.x = BSBx[10];
+	BSB10.y = BSBy[10];
+	
+	BSB11.x = BSBx[11];
+	BSB11.y = BSBy[11];
+	
+	BSB12.x = BSBx[12];
+	BSB12.y = BSBy[12];
+	
+	BSB13.x = BSBx[13];
+	BSB13.y = BSBy[13];
+	
+	BSB14.x = BSBx[14];
+	BSB14.y = BSBy[14];
+
+	BSB15.x = BSBx[15];
+	BSB15.y = BSBy[15];
+	
+		
+	BSB1.h = 20;
+	BSB1.w = 20;
+	
+	BSB2.h = 20;
+	BSB2.w = 20;
+	
+	BSB3.h = 20;
+	BSB3.w = 20;
+	
+	BSB4.h = 20;
+	BSB4.w = 20;
+	
+	BSB5.h = 20;
+	BSB5.w = 20;
+	
+	BSB6.h = 20;
+	BSB6.w = 20;
+	
+	BSB7.h = 20;
+	BSB7.w = 20;
+	
+	BSB8.h = 20;
+	BSB8.w = 20;
+	
+	BSB8.h = 20;
+	BSB8.w = 20;
+	
+	BSB9.h = 20;
+	BSB9.w = 20;
+	
+	BSB10.h = 20;
+	BSB10.w = 20;
+	
+    BSB11.h = 20;
+    BSB11.w = 20;
+    
+    BSB12.h = 20;
+    BSB12.w = 20;
+    
+    BSB13.h = 20;
+    BSB13.w = 20;
+    
+    BSB14.h = 20;
+    BSB14.w = 20;
+    
+    BSB15.h = 20;
+    BSB15.w = 20;
+    
+    // Row 3 /////////////
+    
+    BSC1.x = BSCx[1];
+	BSC1.y = BSCy[1];
+	
+	BSC2.x = BSCx[2];
+	BSC2.y = BSCy[2];
+	
+	BSC3.x = BSCx[3];
+	BSC3.y = BSCy[3];
+	
+	BSC4.x = BSCx[4];
+	BSC4.y = BSCy[4];
+	
+	BSC5.x = BSCx[5];
+	BSC5.y = BSCy[5];
+	
+	BSC6.x = BSCx[6];
+	BSC6.y = BSCy[6];
+	
+	BSC7.x = BSCx[7];
+	BSC7.y = BSCy[7];
+	
+	BSC8.x = BSCx[8];
+	BSC8.y = BSCy[8];
+	
+	BSC9.x = BSCx[9];
+	BSC9.y = BSCy[9];
+	
+	BSC10.x = BSCx[10];
+	BSC10.y = BSCy[10];
+	
+	BSC11.x = BSCx[11];
+	BSC11.y = BSCy[11];
+	
+	BSC12.x = BSCx[12];
+	BSC12.y = BSCy[12];
+	
+	BSC13.x = BSCx[13];
+	BSC13.y = BSCy[13];
+	
+	BSC14.x = BSCx[14];
+	BSC14.y = BSCy[14];
+
+	BSC15.x = BSCx[15];
+	BSC15.y = BSCy[15];
+	
+		
+	BSC1.h = 20;
+	BSC1.w = 20;
+	
+	BSC2.h = 20;
+	BSC2.w = 20;
+	
+	BSC3.h = 20;
+	BSC3.w = 20;
+	
+	BSC4.h = 20;
+	BSC4.w = 20;
+	
+	BSC5.h = 20;
+	BSC5.w = 20;
+	
+	BSC6.h = 20;
+	BSC6.w = 20;
+	
+	BSC7.h = 20;
+	BSC7.w = 20;
+	
+	BSC8.h = 20;
+	BSC8.w = 20;
+	
+	BSC8.h = 20;
+	BSC8.w = 20;
+	
+	BSC9.h = 20;
+	BSC9.w = 20;
+	
+	BSC10.h = 20;
+	BSC10.w = 20;
+	
+    BSC11.h = 20;
+    BSC11.w = 20;
+    
+    BSC12.h = 20;
+    BSC12.w = 20;
+    
+    BSC13.h = 20;
+    BSC13.w = 20;
+    
+    BSC14.h = 20;
+    BSC14.w = 20;
+    
+    BSC15.h = 20;
+    BSC15.w = 20;
 
 }
 
@@ -190,7 +382,59 @@ void Set_Badship_loc()
 		// and 2nd for loop when needed
 		//BSAy[i] = ((spacerY * 2) * i);
 	}
+	
+	for(int j= 1; j < 16; j++)
+	{
+		BSBy[j] = (60);
+		
+			for(int i = 1; i < 16; i++)
+			{
+				BSBx[i] = ((20* 2) * i);
+			}
+	}
+	
+		for(int j= 1; j < 16; j++)
+	{
+		BSCy[j] = (100);
+		
+			for(int i = 1; i < 16; i++)
+			{
+				BSCx[i] = ((20* 2) * i);
+			}
+	}
 }
+
+void moveships_left()
+{
+	for(int i = 1; i < 16; i++)
+	{
+		BSAx[i] -= 5;
+		BSBx[i] -= 5;
+	    BSCx[i] -= 5;
+	}
+}
+
+void moveships_right()
+{
+	for(int i = 1; i < 16; i++)
+	{
+		BSAx[i] += 5;
+		BSBx[i] += 5;
+	    BSCx[i] += 5;
+	}
+}
+
+void moveships_down()
+{
+	for(int i = 1; i < 16; i++)
+	{
+		BSAy[i] += 20;
+		BSBy[i] += 20;
+	    BSCy[i] += 20;
+	}
+}
+
+
 
 void Draw_BadShips()
 {
@@ -225,6 +469,73 @@ void Draw_BadShips()
 	SDL_RenderFillRect(Ren0, &BSA14);
 	//if(BSAA[15])
 	SDL_RenderFillRect(Ren0, &BSA15);
+	// row B //////////////
+	////////////////////	SDL_SetRenderDrawColor( Ren0, 200, 200, 200, 255 ); 
+	//if(BSBA[1])
+	SDL_RenderFillRect(Ren0, &BSB1);
+	//if(BSBA[2])
+	SDL_RenderFillRect(Ren0, &BSB2);
+	//if(BSBA[3])
+	SDL_RenderFillRect(Ren0, &BSB3);
+	//if(BSBA[4])
+	SDL_RenderFillRect(Ren0, &BSB4);
+	//if(BSBA[5])
+	SDL_RenderFillRect(Ren0, &BSB5);
+	//if(BSBA[6])
+	SDL_RenderFillRect(Ren0, &BSB6);
+	//if(BSBA[7])
+	SDL_RenderFillRect(Ren0, &BSB7);
+	//if(BSBA[8])
+	SDL_RenderFillRect(Ren0, &BSB8);
+	//if(BSBA[9])
+	SDL_RenderFillRect(Ren0, &BSB9);
+	//if(BSBA[10])
+	SDL_RenderFillRect(Ren0, &BSB10);
+	//if(BSBA[11])
+	SDL_RenderFillRect(Ren0, &BSB11);
+	//if(BSBA[12])
+	SDL_RenderFillRect(Ren0, &BSB12);
+	//if(BSBA[13])
+	SDL_RenderFillRect(Ren0, &BSB13);
+	//if(BSBA[14])
+	SDL_RenderFillRect(Ren0, &BSB14);
+	//if(BSBA[15])
+	SDL_RenderFillRect(Ren0, &BSB15);
+	
+	//////////////////////////////////////////
+	////////////ROW C ////////////////////////
+	//////////////////////////////////////////
+	
+		//if(BSBA[1])
+	SDL_RenderFillRect(Ren0, &BSC1);
+	//if(BSBA[2])
+	SDL_RenderFillRect(Ren0, &BSC2);
+	//if(BSBA[3])
+	SDL_RenderFillRect(Ren0, &BSC3);
+	//if(BSBA[4])
+	SDL_RenderFillRect(Ren0, &BSC4);
+	//if(BSBA[5])
+	SDL_RenderFillRect(Ren0, &BSC5);
+	//if(BSBA[6])
+	SDL_RenderFillRect(Ren0, &BSC6);
+	//if(BSBA[7])
+	SDL_RenderFillRect(Ren0, &BSC7);
+	//if(BSBA[8])
+	SDL_RenderFillRect(Ren0, &BSC8);
+	//if(BSBA[9])
+	SDL_RenderFillRect(Ren0, &BSC9);
+	//if(BSBA[10])
+	SDL_RenderFillRect(Ren0, &BSC10);
+	//if(BSBA[11])
+	SDL_RenderFillRect(Ren0, &BSC11);
+	//if(BSBA[12])
+	SDL_RenderFillRect(Ren0, &BSC12);
+	//if(BSBA[13])
+	SDL_RenderFillRect(Ren0, &BSC13);
+	//if(BSBA[14])
+	SDL_RenderFillRect(Ren0, &BSC14);
+	//if(BSBA[15])
+	SDL_RenderFillRect(Ren0, &BSC15);
 	
 }
 

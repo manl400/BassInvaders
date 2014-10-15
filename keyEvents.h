@@ -41,6 +41,9 @@ void Key_Presses()
 		    			 //case SDLK_LEFT:  x-= 3; break;
            				 //case SDLK_RIGHT: x+= 3; break;
            				 case SDLK_DOWN: Fire_Laser(); break;
+           				 case SDLK_1:    moveships_left(); break;
+           				 case SDLK_2:    moveships_right(); break;
+           				 case SDLK_3:    moveships_down(); break;
             		
 				    default: break;
 				}

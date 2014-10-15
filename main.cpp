@@ -15,6 +15,9 @@
 #include <SDL_Image.h>
 #include <SDL_ttf.h>
 #include <iostream>
+////
+#include "z_testheader.h"
+////
 #include "create.h"
 #include "BadShips.h"
 #include "sdl_init.h"

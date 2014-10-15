@@ -2,15 +2,18 @@
 #define CREATE_H
 
 
-
 //////////////////
 int x = 310, y = 440;
 int movespeed = 7;
 bool LAZER, particlesA = true;
 int temp_loc;
 int px[7], py[7]; // need to find a way to not make these globals
-int BSAx[11], BSAy[20];
-bool BSAA[11];
+int BSAx[15], BSAy[20];
+bool BSAA[15];
+int BSBx[15], BSBy[20];
+bool BSBA[15];
+int BSCx[15], BSCy[20];
+bool BSCA[15];
 //////////////////
 int lx = x + 5, ly = 430;
 
