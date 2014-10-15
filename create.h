@@ -72,6 +72,26 @@ SDL_Rect ShipB;
 	SDL_Rect BSA10;
 	SDL_Rect BSB10;
 	SDL_Rect BSC10;
+	
+	SDL_Rect BSA11;
+	SDL_Rect BSB11;
+	SDL_Rect BSC11;
+	
+	SDL_Rect BSA12;
+	SDL_Rect BSB12;
+	SDL_Rect BSC12;
+	
+	SDL_Rect BSA13;
+	SDL_Rect BSB13;
+	SDL_Rect BSC13;
+	
+	SDL_Rect BSA14;
+	SDL_Rect BSB14;
+	SDL_Rect BSC14;
+	
+	SDL_Rect BSA15;
+	SDL_Rect BSB15;
+	SDL_Rect BSC15;
 
 //for praticals
 SDL_Rect PARTA;

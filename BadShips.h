@@ -109,6 +109,21 @@ void Update_BadShip_Loc()
 	BSA10.x = BSAx[10];
 	BSA10.y = BSAy[10];
 	
+	BSA11.x = BSAx[11];
+	BSA11.y = BSAy[11];
+	
+	BSA12.x = BSAx[12];
+	BSA12.y = BSAy[12];
+	
+	BSA13.x = BSAx[13];
+	BSA13.y = BSAy[13];
+	
+	BSA14.x = BSAx[14];
+	BSA14.y = BSAy[14];
+
+	BSA15.x = BSAx[15];
+	BSA15.y = BSAy[15];
+	
 		
 	BSA1.h = 20;
 	BSA1.w = 20;
@@ -137,10 +152,26 @@ void Update_BadShip_Loc()
 	BSA8.h = 20;
 	BSA8.w = 20;
 	
+	BSA9.h = 20;
+	BSA9.w = 20;
+	
 	BSA10.h = 20;
 	BSA10.w = 20;
 	
-
+    BSA11.h = 20;
+    BSA11.w = 20;
+    
+    BSA12.h = 20;
+    BSA12.w = 20;
+    
+    BSA13.h = 20;
+    BSA13.w = 20;
+    
+    BSA14.h = 20;
+    BSA14.w = 20;
+    
+    BSA15.h = 20;
+    BSA15.w = 20;
 
 }
 
@@ -148,10 +179,10 @@ void Set_Badship_loc()
 {
 	int spacerX = 20;
 	int spacerY = 20;
-	for(int j= 1; j < 11; j++)
+	for(int j= 1; j < 16; j++)
 	{
 		BSAy[j] = (20);
-		for(int i =1; i < 11; i++)
+		for(int i =1; i < 16; i++)
 		{
 		
 		BSAx[i] = ((spacerX * 2) * i);
@@ -184,6 +215,16 @@ void Draw_BadShips()
 	SDL_RenderFillRect(Ren0, &BSA9);
 	//if(BSAA[10])
 	SDL_RenderFillRect(Ren0, &BSA10);
+	//if(BSAA[11])
+	SDL_RenderFillRect(Ren0, &BSA11);
+	//if(BSAA[12])
+	SDL_RenderFillRect(Ren0, &BSA12);
+	//if(BSAA[13])
+	SDL_RenderFillRect(Ren0, &BSA13);
+	//if(BSAA[14])
+	SDL_RenderFillRect(Ren0, &BSA14);
+	//if(BSAA[15])
+	SDL_RenderFillRect(Ren0, &BSA15);
 	
 }
 
