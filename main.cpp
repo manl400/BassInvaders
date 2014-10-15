@@ -15,9 +15,6 @@
 #include <SDL_Image.h>
 #include <SDL_ttf.h>
 #include <iostream>
-////
-#include "z_testheader.h"
-////
 #include "create.h"
 #include "BadShips.h"
 #include "sdl_init.h"
@@ -31,9 +28,21 @@
 using namespace std;
 
 
+
 int main(int argc, char *argv[])
 {
 	INIT_EVERYTHING();
+	ship_live();
+	
+	//teseting ships logic
+	/*
+	BSAA[1] = false;
+	BSBA[1] = false;
+	BSCA[1] = false;
+	BSAA[2] = false;
+	BSBA[2] = false;
+	*/
+	//
 	
 	//for frame rate.
 	const int FPS=60;

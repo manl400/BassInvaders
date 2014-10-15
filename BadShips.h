@@ -76,6 +76,15 @@ void CreateShips()
 }
 */
 
+void ship_live()
+{
+	for(int i = 1; i < 16; i++)
+	{
+		BSAA[i] = true;
+		BSBA[i] = true;
+		BSCA[i] = true;
+	}
+}
 
 void Update_BadShip_Loc()
 {
@@ -408,9 +417,9 @@ void moveships_left()
 {
 	for(int i = 1; i < 16; i++)
 	{
-		BSAx[i] -= 5;
-		BSBx[i] -= 5;
-	    BSCx[i] -= 5;
+		BSAx[i] -= 1;
+		BSBx[i] -= 1;
+	    BSCx[i] -= 1;
 	}
 }
 
@@ -418,9 +427,9 @@ void moveships_right()
 {
 	for(int i = 1; i < 16; i++)
 	{
-		BSAx[i] += 5;
-		BSBx[i] += 5;
-	    BSCx[i] += 5;
+		BSAx[i] += 1;
+		BSBx[i] += 1;
+	    BSCx[i] += 1;
 	}
 }
 
@@ -428,10 +437,41 @@ void moveships_down()
 {
 	for(int i = 1; i < 16; i++)
 	{
-		BSAy[i] += 20;
-		BSBy[i] += 20;
-	    BSCy[i] += 20;
+		BSAy[i] += 3;
+		BSBy[i] += 3;
+	    BSCy[i] += 3;
 	}
+}
+
+////(SHIP LOGIC)/////
+int dic = 1;
+void Badship_movement()
+{
+	if(dic == 1)
+	moveships_left();
+	else if(dic == 2)
+	moveships_right();
+	
+	for(int i = 1; i < 16; i++)
+	{
+		if((BSAx[i] < 0 && BSAA[i])|| (BSBx[i] < 0 && BSBA[i]) || (BSCx[i] < 0 && BSCA[i]))
+		{
+			dic = 2;
+			moveships_down();
+		}
+		if((BSAx[i] > 620 && BSAA[i]) || (BSBx[i] > 620 && BSBA[i]) || (BSCx[i] > 620 && BSCA[i]))
+		{
+			dic = 1;
+			moveships_down();
+		}
+	}
+}
+////////////////////
+// hit detetion
+void Check_hit()
+{
+	// lazer x and y is lx, ly 
+	
 }
 
 
@@ -439,102 +479,102 @@ void moveships_down()
 void Draw_BadShips()
 {
 	SDL_SetRenderDrawColor( Ren0, 200, 200, 200, 255 ); 
-	//if(BSAA[1])
+	if(BSAA[1])
 	SDL_RenderFillRect(Ren0, &BSA1);
-	//if(BSAA[2])
+	if(BSAA[2])
 	SDL_RenderFillRect(Ren0, &BSA2);
-	//if(BSAA[3])
+	if(BSAA[3])
 	SDL_RenderFillRect(Ren0, &BSA3);
-	//if(BSAA[4])
+	if(BSAA[4])
 	SDL_RenderFillRect(Ren0, &BSA4);
-	//if(BSAA[5])
+	if(BSAA[5])
 	SDL_RenderFillRect(Ren0, &BSA5);
-	//if(BSAA[6])
+	if(BSAA[6])
 	SDL_RenderFillRect(Ren0, &BSA6);
-	//if(BSAA[7])
+	if(BSAA[7])
 	SDL_RenderFillRect(Ren0, &BSA7);
-	//if(BSAA[8])
+	if(BSAA[8])
 	SDL_RenderFillRect(Ren0, &BSA8);
-	//if(BSAA[9])
+	if(BSAA[9])
 	SDL_RenderFillRect(Ren0, &BSA9);
-	//if(BSAA[10])
+	if(BSAA[10])
 	SDL_RenderFillRect(Ren0, &BSA10);
-	//if(BSAA[11])
+	if(BSAA[11])
 	SDL_RenderFillRect(Ren0, &BSA11);
-	//if(BSAA[12])
+	if(BSAA[12])
 	SDL_RenderFillRect(Ren0, &BSA12);
-	//if(BSAA[13])
+	if(BSAA[13])
 	SDL_RenderFillRect(Ren0, &BSA13);
-	//if(BSAA[14])
+	if(BSAA[14])
 	SDL_RenderFillRect(Ren0, &BSA14);
-	//if(BSAA[15])
+	if(BSAA[15])
 	SDL_RenderFillRect(Ren0, &BSA15);
 	// row B //////////////
 	////////////////////	SDL_SetRenderDrawColor( Ren0, 200, 200, 200, 255 ); 
-	//if(BSBA[1])
+	if(BSBA[1])
 	SDL_RenderFillRect(Ren0, &BSB1);
-	//if(BSBA[2])
+	if(BSBA[2])
 	SDL_RenderFillRect(Ren0, &BSB2);
-	//if(BSBA[3])
+	if(BSBA[3])
 	SDL_RenderFillRect(Ren0, &BSB3);
-	//if(BSBA[4])
+	if(BSBA[4])
 	SDL_RenderFillRect(Ren0, &BSB4);
-	//if(BSBA[5])
+	if(BSBA[5])
 	SDL_RenderFillRect(Ren0, &BSB5);
-	//if(BSBA[6])
+	if(BSBA[6])
 	SDL_RenderFillRect(Ren0, &BSB6);
-	//if(BSBA[7])
+	if(BSBA[7])
 	SDL_RenderFillRect(Ren0, &BSB7);
-	//if(BSBA[8])
+	if(BSBA[8])
 	SDL_RenderFillRect(Ren0, &BSB8);
-	//if(BSBA[9])
+	if(BSBA[9])
 	SDL_RenderFillRect(Ren0, &BSB9);
-	//if(BSBA[10])
+	if(BSBA[10])
 	SDL_RenderFillRect(Ren0, &BSB10);
-	//if(BSBA[11])
+	if(BSBA[11])
 	SDL_RenderFillRect(Ren0, &BSB11);
-	//if(BSBA[12])
+	if(BSBA[12])
 	SDL_RenderFillRect(Ren0, &BSB12);
-	//if(BSBA[13])
+	if(BSBA[13])
 	SDL_RenderFillRect(Ren0, &BSB13);
-	//if(BSBA[14])
+	if(BSBA[14])
 	SDL_RenderFillRect(Ren0, &BSB14);
-	//if(BSBA[15])
+	if(BSBA[15])
 	SDL_RenderFillRect(Ren0, &BSB15);
 	
 	//////////////////////////////////////////
 	////////////ROW C ////////////////////////
 	//////////////////////////////////////////
 	
-		//if(BSBA[1])
+	if(BSCA[1])
 	SDL_RenderFillRect(Ren0, &BSC1);
-	//if(BSBA[2])
+	if(BSCA[2])
 	SDL_RenderFillRect(Ren0, &BSC2);
-	//if(BSBA[3])
+	if(BSCA[3])
 	SDL_RenderFillRect(Ren0, &BSC3);
-	//if(BSBA[4])
+	if(BSCA[4])
 	SDL_RenderFillRect(Ren0, &BSC4);
-	//if(BSBA[5])
+	if(BSCA[5])
 	SDL_RenderFillRect(Ren0, &BSC5);
-	//if(BSBA[6])
+	if(BSCA[6])
 	SDL_RenderFillRect(Ren0, &BSC6);
-	//if(BSBA[7])
+	if(BSCA[7])
 	SDL_RenderFillRect(Ren0, &BSC7);
-	//if(BSBA[8])
+	if(BSCA[8])
 	SDL_RenderFillRect(Ren0, &BSC8);
-	//if(BSBA[9])
+	if(BSCA[9])
 	SDL_RenderFillRect(Ren0, &BSC9);
-	//if(BSBA[10])
+	if(BSCA[10])
 	SDL_RenderFillRect(Ren0, &BSC10);
-	//if(BSBA[11])
+	if(BSCA[11])
 	SDL_RenderFillRect(Ren0, &BSC11);
-	//if(BSBA[12])
+	if(BSCA[12])
 	SDL_RenderFillRect(Ren0, &BSC12);
-	//if(BSBA[13])
+	if(BSCA[13])
 	SDL_RenderFillRect(Ren0, &BSC13);
-	//if(BSBA[14])
+	if(BSCA[14])
 	SDL_RenderFillRect(Ren0, &BSC14);
-	//if(BSBA[15])
+	if(BSCA[15])
 	SDL_RenderFillRect(Ren0, &BSC15);
 	
 }

@@ -9,11 +9,11 @@ bool LAZER, particlesA = true;
 int temp_loc;
 int px[7], py[7]; // need to find a way to not make these globals
 int BSAx[15], BSAy[20];
-bool BSAA[15];
-int BSBx[15], BSBy[20];
-bool BSBA[15];
-int BSCx[15], BSCy[20];
-bool BSCA[15];
+bool BSAA[16];
+int BSBx[16], BSBy[20];
+bool BSBA[16];
+int BSCx[16], BSCy[20];
+bool BSCA[16];
 //////////////////
 int lx = x + 5, ly = 430;
 
