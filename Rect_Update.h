@@ -35,7 +35,9 @@ void Update_Rect()
 	Ship_Update();
 	Laser_WPN();
 	update_laser();
+	Check_hit();
 	Update_BadShip_Loc();
 	Badship_movement();
+	
 }
 #endif

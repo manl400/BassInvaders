@@ -471,7 +471,25 @@ void Badship_movement()
 void Check_hit()
 {
 	// lazer x and y is lx, ly 
-	
+	for(int i = 1; i < 16; i++)
+	{
+		//if( ((lx > BSAx[i]) && (lx < BSAx[i]+20 )) && (( ly > BSAy[i]+20) && ( ly < BSAy[i]) ))
+		if(ly > BSAy[i] && ly < BSAy[i]+20)
+		{
+			if(lx > BSAx[i] && lx < BSAx[i]+20)
+			BSAA[i] = false;
+		}
+		if(ly > BSBy[i] && ly < BSBy[i]+20)
+		{
+			if(lx > BSBx[i] && lx < BSBx[i]+20)
+			BSBA[i] = false;
+		}
+		if(ly > BSCy[i] && ly < BSCy[i]+20)
+		{
+			if(lx > BSCx[i] && lx < BSCx[i]+20)
+			BSCA[i] = false;
+		}
+	}
 }
 
 
