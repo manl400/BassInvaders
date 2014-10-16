@@ -45,7 +45,7 @@ void Key_Presses()
            				 case SDLK_2:    moveships_right(); break;
            				 case SDLK_3:    moveships_down(); break;
            				 case SDLK_4: Stop_pat = true; break;
-           				 case SDLK_0:     Set_Badship_loc(); ship_live(); break;
+           				 case SDLK_0:     Set_Badship_loc(); ship_live(); Bspeed = 1; break;
             		
 				    default: break;
 				}
