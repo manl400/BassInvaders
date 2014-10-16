@@ -15,6 +15,7 @@ bool BSBA[16];
 int BSCx[16], BSCy[20];
 bool BSCA[16];
 bool laser, wait; // need to find a way to make this not global.
+bool Stop_pat;
 //////////////////
 int lx = x + 5, ly = 430;
 
@@ -113,7 +114,7 @@ SDL_Rect LaserA;
 void reset_laser()
 {
 		
-	
+		Stop_pat = true;
 		LAZER = false;
 		ly = 430;
 		wait = false;

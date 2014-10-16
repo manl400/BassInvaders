@@ -75,6 +75,31 @@ void CreateShips()
 	BSA10.w = 20;	
 }
 */
+int  Bspeed = 1;
+void BadShips_left()
+{
+	int BSleft = 0;
+	for(int i = 1; i < 16; i++)
+	{
+		if(!BSAA[i])
+		BSleft ++;
+		if(!BSBA[1])
+		BSleft ++;
+		if(!BSCA[i])
+		BSleft ++;
+	}
+	std::cout << BSleft << std::endl;
+	
+	if(BSleft == 10)
+	Bspeed = 2;
+	if(BSleft == 20)
+	Bspeed = 3;
+	if(BSleft == 30)
+	Bspeed = 4;
+	if(BSleft == 44)
+	Bspeed =5;
+	
+}
 
 void ship_live()
 {
@@ -83,6 +108,7 @@ void ship_live()
 		BSAA[i] = true;
 		BSBA[i] = true;
 		BSCA[i] = true;
+		Bspeed = 1;
 	}
 }
 
@@ -417,9 +443,9 @@ void moveships_left()
 {
 	for(int i = 1; i < 16; i++)
 	{
-		BSAx[i] -= 1;
-		BSBx[i] -= 1;
-	    BSCx[i] -= 1;
+		BSAx[i] -= Bspeed;
+		BSBx[i] -= Bspeed;
+	    BSCx[i] -= Bspeed;
 	}
 }
 
@@ -427,9 +453,9 @@ void moveships_right()
 {
 	for(int i = 1; i < 16; i++)
 	{
-		BSAx[i] += 1;
-		BSBx[i] += 1;
-	    BSCx[i] += 1;
+		BSAx[i] += Bspeed;
+		BSBx[i] += Bspeed;
+	    BSCx[i] += Bspeed;
 	}
 }
 
@@ -480,6 +506,7 @@ void Check_hit()
 			if(BSAA[i])
 			reset_laser();
 			BSAA[i] = false;
+			BadShips_left();
 			}
 		}
 		if(LaserA.y > BSBy[i] && LaserA.y < BSBy[i]+20)
@@ -488,6 +515,8 @@ void Check_hit()
 			if(BSBA[i])
 			reset_laser();
 			BSBA[i] = false;
+			
+			BadShips_left();
 			}
 		}
 		if(LaserA.y > BSCy[i] && LaserA.y < BSCy[i]+20)
@@ -496,6 +525,7 @@ void Check_hit()
 			if(BSCA[i])
 			reset_laser();
 			BSCA[i] = false;
+			BadShips_left();
 			}
 		}
 	}

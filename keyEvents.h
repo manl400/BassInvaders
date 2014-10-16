@@ -40,10 +40,12 @@ void Key_Presses()
 					// key events that arn't contious-response can be put here.
 		    			 //case SDLK_LEFT:  x-= 3; break;
            				 //case SDLK_RIGHT: x+= 3; break;
-           				 case SDLK_DOWN: Fire_Laser(); break;
+           				 case SDLK_DOWN: Fire_Laser(); if(Stop_pat) Stop_pat = false; break;
            				 case SDLK_1:    moveships_left(); break;
            				 case SDLK_2:    moveships_right(); break;
            				 case SDLK_3:    moveships_down(); break;
+           				 case SDLK_4: Stop_pat = true; break;
+           				 case SDLK_0:     Set_Badship_loc(); ship_live(); break;
             		
 				    default: break;
 				}

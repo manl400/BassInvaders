@@ -39,5 +39,6 @@ void Update_Rect()
 	Update_BadShip_Loc();
 	Badship_movement();
 	
+	
 }
 #endif

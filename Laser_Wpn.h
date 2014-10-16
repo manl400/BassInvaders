@@ -68,6 +68,7 @@ void Draw_particles()
 bool tic_tock; //for particals// need to not have this be gloabal.
 void particles(int a, int b)
 {
+	
 	if(particlesA)
 	{
 	for(int i; i < 7; i++)
@@ -140,8 +141,8 @@ void particles(int a, int b)
 		px[6] += movespeed- 1;
 	}
 	
-	// check to turn of gun partdicals
-	if(ly < 225)
+	// check to turn off gun partdicals
+	if(ly < 255 || Stop_pat)
 	{
 	particlesA = true;
 	alphalowerA = 255;
